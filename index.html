@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather App</title>
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- bootstrap library -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- css file -->
+    <link rel="stylesheet" href="./css/main.css">
+    
+</head>
+<body>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary d-none " data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        </div>
+        <div class="modal-body text-black">
+          oops invalid value!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="main-app">
+
+    <nav>
+        <div class="container d-flex justify-content-around align-items-center">
+            <h2 class="searched-location"></h2>
+            <input type="search" name="search" id="search" placeholder="search" class="rounded rounded-pill p-1">
+        </div>
+    </nav>
+
+    <div class="main d-flex justify-content-center my-5">
+        <div class="container">
+            <div class="row">
+                <div class="weather-data-container col-12 position-relative">
+                    <div class="weather-data w-100 d-flex">
+    
+                    </div>
+                    <div class="rain-percentage position-absolute  bg-black bg-dark d-flex py-4 px-3">
+                        <div class="rain-block position-relative"><div class="rain-block-percentage w-100 bg-white"></div><div class="position-absolute text-white rain-block-description"><p id="clock" class="m-2" data-clock="9">9</p><p class="mx-3">AM</p></div></div>
+                        <div class="rain-block position-relative"><div class="rain-block-percentage w-100 bg-white"></div><div class="position-absolute text-white rain-block-description"><p id="clock" class="m-2" data-clock="11">11</p><p class="mx-3">AM</p></div></div>
+                        <div class="rain-block position-relative"><div class="rain-block-percentage w-100 bg-white"></div><div class="position-absolute text-white rain-block-description"><p id="clock" class="m-2" data-clock="15">3</p><p class="mx-3">PM</p></div></div>
+                        <div class="rain-block position-relative"><div class="rain-block-percentage w-100 bg-white"></div><div class="position-absolute text-white rain-block-description"><p id="clock" class="m-2" data-clock="19">7</p><p class="mx-3">PM</p></div></div>
+                        <div class="rain-block position-relative"><div class="rain-block-percentage w-100 bg-white"></div><div class="position-absolute text-white rain-block-description"><p id="clock" class="m-2" data-clock="22">10</p><p class="mx-3">PM</p></div></div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="header-cities-pic d-flex align-items-center justify-content-between mt-5 ">
+                        <h2 class="my-5">Recent cities</h2>
+                        <div class="delete btn btn-primary">clear all <i class="fa-solid fa-trash-can"></i></div>
+                    </div>
+                    
+                    <div class="cities-pic-container">
+                        <div id="cities-pic" class="d-flex g-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+</div>
+    <script src="./js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <div class="modal-backdrop fade show d-none"></div>
+</body>
+</html>
+
+
+
